@@ -27,7 +27,7 @@ print("mississippi", unique_english_letters_solution("mississippi"))
 print("Apple", unique_english_letters_solution("Apple"))
 # should print 4
 
-# 2 - Count X
+# 2 - Count X 
 
 
 # exercise / same solution algorithm
@@ -78,3 +78,18 @@ print(substring_between_letters("apple", "p", "e"))
 # should print "pl"
 print(substring_between_letters("apple", "p", "c"))
 # should print "apple"
+
+# 5 - X Length
+
+# exercise / same solution algorithm
+def x_length_words(sentence, x):
+    for word in sentence.split(' '):
+        if len(word) < x:
+            return False
+    return True
+
+
+print(x_length_words("i like apples", 2))
+# should print False
+print(x_length_words("he likes apples", 2))
+# should print True
