@@ -45,3 +45,36 @@ print(count_char_x("mississippi", "s"))
 # should print 4
 print(count_char_x("mississippi", "m"))
 # should print 1
+
+# 3 - Count Multi X
+
+# exercise / same solution algorithm
+def count_multi_char_x(word, x):
+    # return word.count(x)
+    return len(word.split(x)) - 1
+
+
+print(count_multi_char_x("mississippi", "iss"))
+# should print 2
+print(count_multi_char_x("apple", "pp"))
+# should print 1
+
+print('assaa'.index('s'))
+
+# 4 - Substring Between
+
+# exercise / same solution algorithm
+def substring_between_letters(word, start, end):
+    start_index = word.find(start)
+    end_index = word.find(end)
+
+    if start_index > -1 and end_index > -1:
+        return word[start_index + 1:end_index]
+
+    return word
+
+
+print(substring_between_letters("apple", "p", "e"))
+# should print "pl"
+print(substring_between_letters("apple", "p", "c"))
+# should print "apple"
